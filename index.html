@@ -1,9 +1,106 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Title</title>
-  </head>
-  <body>
-    <p>Paragraph</p>
-  </body>
+<html lang="en-ca">
+<head>
+  <meta charset="utf-8" />
+  <meta name="description" content="Ticket Price, in JS" />
+  <meta name="keywords" content="mths, ics2o" />
+  <meta name="author" content="Julianne Leblanc-Peltier" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+  <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.red-deep_orange.min.css" />
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+  <link rel="manifest" href="site.webmanifest" />
+  <title>Ticket Price, in JS</title>
+</head>
+<body>
+  <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+  <script src="./js/script.js"></script>
+  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <header class="mdl-layout__header">
+      <div class="mdl-layout__header-row">
+        <span class="mdl-layout-title">Ticket Price, in JS</span>
+      </div>
+    </header>
+    <div class="content">
+      <div class="row">
+        <div class="column">
+          <div class="innerbody">
+            <br />
+            <p>
+              Fill out the below information to see if you're elligible for our student pricing
+            </p>
+            <br />
+            <p>
+              What day of the week is it?
+            </p>
+            <!-- Radio Button Positive -->
+            <form action="#">
+              <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-monday">
+                <input type="radio" id="option-monday" class="mdl-radio__button" name="day-of-week" value="1" checked>
+                <span class="mdl-radio__label">Monday</span>
+              </label>
+              <!-- Radio Button Negative -->
+              <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-tuesday">
+                <input type="radio" id="option-tuesday" class="mdl-radio__button" name="day-of-week" value="2">
+                <span class="mdl-radio__label">Tuesday</span>
+              </label>
+                            <!-- Radio Button Negative -->
+              <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-wednesday">
+                <input type="radio" id="option-wednesday" class="mdl-radio__button" name="day-of-week" value="2">
+                <span class="mdl-radio__label">Wednesday</span>
+              </label>
+              <!-- Radio Button Negative -->
+              <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-thursday">
+                <input type="radio" id="option-thursday" class="mdl-radio__button" name="day-of-week" value="2">
+                <span class="mdl-radio__label">Thursday</span>
+              </label>
+              <!-- Radio Button Negative -->
+              <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-friday">
+                <input type="radio" id="option-friday" class="mdl-radio__button" name="day-of-week" value="2">
+                <span class="mdl-radio__label">Friday</span>
+              </label>
+              <!-- Radio Button Negative -->
+              <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-saturday">
+                <input type="radio" id="option-saturday" class="mdl-radio__button" name="day-of-week" value="2">
+                <span class="mdl-radio__label">Saturday</span>
+              </label>
+              <!-- Radio Button Negative -->
+              <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-sunday">
+                <input type="radio" id="option-sunday" class="mdl-radio__button" name="day-of-week" value="2">
+                <span class="mdl-radio__label">Sunday</span>
+              </label>
+              <br />
+              <br />
+              <p>
+                How old are you?
+              </p>
+              <!-- Numeric Textfield -->
+              <div class="mdl-textfield mdl-js-textfield">
+                <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="age-of-user">
+                <label class="mdl-textfield__label" for="age-of-user">Enter age here...</label>
+                 <span class="mdl-textfield__error">Input is not a number!</span>
+              </div>
+              <!-- Accent-colored raised button with ripple -->
+              <br />
+              <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+                onclick="myButtonClicked()">
+                Done
+              </button>
+            </form>
+            <div id="eligibility-for-user"></div>
+          </div>
+        </div>
+        <div class="column">
+          <br />
+          <br />
+          <br />
+          <img src="./images/museum.jpg">
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
 </html>
